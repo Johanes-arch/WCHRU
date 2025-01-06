@@ -1,0 +1,931 @@
+/* General Styles */
+.nav-links{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+}
+/* Sticky Header Styling */
+.sticky-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+  width: 70px;
+  height: 80px;
+  margin-left: 40px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 50px; /* Adds space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links a:hover {
+  color: #007BFF; /* Highlight color on hover */
+}
+
+/* Donate Button */
+.donate-button .btn {
+  background-color: #A0522D; /* Brown color */
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.donate-button .btn:hover {
+  background-color: #c56724; /* Darker brown */
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none; /* Initially hidden, shown for smaller screens */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Slideshow Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family:Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.about-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center; /* Center-aligns text */
+}
+
+.about-title {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #d4a000;
+  margin: 10px auto;
+}
+
+.about-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-image-card {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px; /* Enable 3D effect */
+}
+
+.image-card {
+  width: 300px; /* Card width */
+  height: 400px; /* Card height */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Darkened shadow */
+}
+
+.image-card:hover {
+  transform: rotateY(180deg); /* Rotate the card on hover */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side when not visible */
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Darker shadow on both sides */
+}
+
+.card-front {
+  background-color: #fff;
+}
+
+.card-back {
+  background-color: #fff;
+  transform: rotateY(180deg); /* Position the back side flipped initially */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.vision-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff;
+}
+
+.vision-section {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  background: #fff;
+}
+
+.vision-card {
+  width: 1000px;
+  height: 400px;
+  perspective: 1000px; /* Enables the 3D effect */
+  margin-right: 50px; /* Increases the space between the card and the text */
+}
+
+.vision-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease; /* Smooth transition */
+}
+
+.vision-card:hover .vision-card-inner {
+  transform: rotateY(180deg); /* Flips the card */
+}
+
+.vision-card-front, .vision-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hides the back side when not visible */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Darker shadow on both sides */
+}
+
+.vision-card-front img, .vision-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vision-card-back {
+  transform: rotateY(180deg); /* Position the back side */
+}
+
+.vision-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+.vision-text h2 {
+  margin: 0;
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-style: italic;
+  
+}
+
+.vision-text h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #f9c834;
+  margin-top: 5px;
+}
+
+.vision-text p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+.mission-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  
+}
+
+.mission-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.mission-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mission-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center; /* Center-aligns text */
+}
+
+.mission-title {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #d4a000;
+  margin: 10px auto;
+}
+
+.mission-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.mission-image-card {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px; /* Enable 3D effect */
+}
+
+.image-card {
+  width: 300px; /* Card width */
+  height: 400px; /* Card height */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Darkened shadow */
+}
+
+.image-card:hover {
+  transform: rotateY(180deg); /* Rotate the card on hover */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side when not visible */
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Darker shadow on both sides */
+}
+
+.card-front {
+  background-color: #fff;
+}
+
+.card-back {
+  background-color: #fff;
+  transform: rotateY(180deg); /* Position the back side flipped initially */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+
+/* Activities Section */
+.activities-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8a02d; /* Matches the yellow background */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  color: #000; /* Black text */
+}
+
+.activities-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+.activities-image-card {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  perspective: 1000px; /* Enables 3D effect */
+  margin: 0 auto; /* Center the card */
+}
+
+.activities-image-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.activities-image-card:hover img {
+  transform: rotateY(180deg); /* Rotates the image on hover */
+}
+
+.activities-content {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  color: #000; /* Black text */
+  padding: 20px;
+  font-style: italic;
+}
+
+.activities-content h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.activities-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  
+}
+.read-more-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px; /* Smaller font size */
+  font-weight: bold;
+  color: #fff; /* White text */
+  background-color: #000; /* Black background */
+  padding: 8px 16px; /* Smaller padding */
+  border-radius: 4px;
+  margin: 10px auto 0; /* Center button below the paragraph */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 50px;
+}
+
+.read-more-btn:hover {
+  background-color:transparent; /* White background on hover */
+  color: #000; /* Black text on hover */
+  border: 1px solid #000; /* Optional: Add a black border */
+}
+
+
+/* Programs Section Styles */
+.programs-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.programs-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.programs-image {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.programs-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.programs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.programs-image:hover .programs-overlay {
+  opacity: 1;
+}
+
+.programs-content {
+  flex: 2;
+  padding: 20px;
+  color: #333;
+  font-style: italic;
+}
+
+.programs-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.programs-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.programs-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Available Programs Section */
+.available-programs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+    background-color: #3178c6; /* Matches the blue background */
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+.program-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.program-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-overlay p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Available Programs Section */
+.available-programs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 100px 0;
+  background-color: #3178c6; /* Blue background */
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%); /* Acute at the top, horizontal at the bottom */
+}
+
+.program-card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+}
+
+.program-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.program-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-overlay p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* News Section Styles */
+.news-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  
+}
+
+.news-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.news-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-image {
+  position: relative;
+}
+
+.news-image img {
+  width: 100%;
+  height: auto;
+}
+
+.date-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff5722;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.date-overlay .date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.date-overlay .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.news-content {
+  padding: 20px;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-excerpt {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-footer .comments {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.news-footer .read-more {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff5722;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.news-footer .read-more:hover {
+  color: #e64a19;
+}
+
+/* Footer Styles */
+.footer {
+  background-color:black;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: grey;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: black;
+}
+
+.newsletter-button {
+  background-color:#d8a02d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.newsletter-button:hover {
+  background-color:#f3bc4f;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: grey;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #636060;
+}
+
